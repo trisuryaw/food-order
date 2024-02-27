@@ -1,12 +1,10 @@
-import { Button } from "@/components/ui/button.tsx";
-import { Link } from "react-router-dom";
-import { LoginRegisterLayout } from "@/layouts/LoginRegisterLayout.tsx";
-import {
-  InputPasswordWithLabel,
-  InputWithLabel,
-} from "@/components/fragments/InputWithLabel.tsx";
+import {Button} from "@/components/ui/button.tsx";
+import {Link} from "react-router-dom";
+import {LoginRegisterLayout} from "@/layouts/LoginRegisterLayout.tsx";
+import {InputPasswordWithLabel, InputWithLabel,} from "@/components/fragments/InputWithLabel.tsx";
 
 const LoginPage = () => {
+
   return (
     <>
       <LoginRegisterLayout title="Login">

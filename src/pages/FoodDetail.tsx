@@ -1,54 +1,65 @@
-import {MainLayout} from "@/layouts/MainLayout.tsx";
+import { MainLayout } from "@/layouts/MainLayout.tsx";
 import nasiGorengImg from "@/assets/img/nasi-goreng.jpg";
-import {Button} from "@/components/ui/button.tsx";
-import {ButtonBack} from "@/components/fragments/ButtonBack.tsx";
-import {ShoppingCart, Star} from "lucide-react";
+import { Button } from "@/components/ui/button.tsx";
+import { ButtonBack } from "@/components/fragments/ButtonBack.tsx";
+import { ShoppingCart, Star } from "lucide-react";
 import * as React from "react";
 
 const FoodDetail = () => {
-    return <>
-        <MainLayout>
-            <ButtonBack text="Detail Makanan" link="/food"/>
-            <main className="grid lg:grid-cols-4 grid-rows-3 lg:gap-x-8">
-                <img src={nasiGorengImg} className="w-full object-cover" alt="Nasi Goreng"/>
-                <section className="col-span-2 text-left">
-                    <div className="flex justify-between lg:mt-0 mt-3">
-                        <div>
-                            <h4 className="font-bold text-lg">Nasi Goreng</h4>
-                            <p className="text-sm">
-                                <span>Kategori: </span>
-                                <span className="text-success font-medium">Dinner</span>
-                            </p>
-                        </div>
+  return (
+    <>
+      <MainLayout>
+        <ButtonBack text="Detail Makanan" link="/food" />
+        <main className="grid grid-rows-3 lg:grid-cols-4 lg:gap-x-8">
+          <img
+            src={nasiGorengImg}
+            className="w-full object-cover"
+            alt="Nasi Goreng"
+          />
+          <section className="col-span-2 text-left">
+            <div className="mt-3 flex justify-between lg:mt-0">
+              <div>
+                <h4 className="text-lg font-bold">Nasi Goreng</h4>
+                <p className="text-sm">
+                  <span>Kategori: </span>
+                  <span className="font-medium text-success">Dinner</span>
+                </p>
+              </div>
 
-                        <Button variant="ghost" className="text-success lg:invisible visible">
-                            <Star/>
-                        </Button>
-                    </div>
-                    <p className="text-2xl text-success font-semibold my-8">Rp 12.000</p>
-                    <p className="text-lg text-success font-medium">Bahan Makanan</p>
-                    <hr className="border-black my-2"/>
+              <Button
+                variant="ghost"
+                className="visible text-success lg:invisible"
+              >
+                <Star />
+              </Button>
+            </div>
+            <p className="my-8 text-2xl font-semibold text-success">
+              Rp 12.000
+            </p>
+            <p className="text-lg font-medium text-success">Bahan Makanan</p>
+            <hr className="my-2 border-black" />
 
-                    <ul className="list-disc ml-5">
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
-                    </ul>
-                </section>
+            <ul className="ml-5 list-disc">
+              <li>Coffee</li>
+              <li>Tea</li>
+              <li>Milk</li>
+            </ul>
+          </section>
 
-                <div>
-                    <Button variant="outline" className="w-full lg:visible invisible">
-                        <Star size={20}/>
-                        <span className="ml-1.5">Favorite</span>
-                    </Button>
-                    <Button variant="success" className="w-full mt-4">
-                        <ShoppingCart size={20}/>
-                        <span className="ml-1.5">Tambah ke Keranjang</span>
-                    </Button>
-                </div>
-            </main>
-        </MainLayout>
+          <div>
+            <Button variant="outline" className="invisible w-full lg:visible">
+              <Star size={20} />
+              <span className="ml-1.5">Favorite</span>
+            </Button>
+            <Button variant="success" className="mt-4 w-full">
+              <ShoppingCart size={20} />
+              <span className="ml-1.5">Tambah ke Keranjang</span>
+            </Button>
+          </div>
+        </main>
+      </MainLayout>
     </>
-}
+  );
+};
 
-export default FoodDetail
+export default FoodDetail;
